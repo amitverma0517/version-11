@@ -123,6 +123,7 @@ hr.rounded {
 }
 
 .navbar {
+	border:none;
     background: var(--bars-light);
     color: var(--light);
     border-radius: 0 0 0 40px;
