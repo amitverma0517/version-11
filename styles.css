@@ -200,7 +200,7 @@ hr.rounded {
 
 .column-66 {
     float: right;
-    width: 56.66666%;
+    width: 66.66666%;
     padding: 20px;
 }
 
@@ -208,6 +208,8 @@ hr.rounded {
     float: left;
     width: 33.33333%;
     padding: 20px;
+    padding-bottom: 0%;
+    margin-top:20px;
 }
 
 .large-font {
@@ -220,12 +222,6 @@ hr.rounded {
     color: var(--hover1);
 }
 
-
-#section1 img {
-    display: block;
-    height: auto;
-    max-width: 250px;
-}
 
 @media screen and (max-width: 1000px) {
 
@@ -274,7 +270,8 @@ hr.rounded {
 }
 
 .responsive {
-    max-width: 260px;
+    max-width: 250px;
+    margin:auto;
     width: auto;
     height: auto;
 }
