@@ -54,7 +54,7 @@ a:hover {
     background-color: var(--bars-light);
     color: #fff;
     cursor: pointer;
-    display:flexbox;
+    display: flexbox;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5;
@@ -64,7 +64,7 @@ a:hover {
     padding: 1rem;
     font-size: 16px;
     cursor: pointer;
-    
+    margin:15px 2px;
 }
 
 .buttons:before {
@@ -72,7 +72,7 @@ a:hover {
     content: "";
     display: inline-block;
     height: 1px;
-    margin:auto;
+    margin: auto;
     transition: all .32s cubic-bezier(.25, .8, .25, 1);
     width: 0;
 }
@@ -80,7 +80,7 @@ a:hover {
 .buttons:hover:before {
     background-color: var(--hover1);
     width: 3rem;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
 /*use vw ex- font-size:3vw   for responsive font-size*/
@@ -123,7 +123,7 @@ hr.rounded {
 }
 
 .navbar {
-	border:none;
+    border: none;
     background: var(--bars-light);
     color: var(--light);
     border-radius: 0 0 0 40px;
@@ -138,11 +138,19 @@ hr.rounded {
 
 .navbar-inverse .navbar-brand {
     color: var(--hover1);
+    /*for underline hover effect*/
+   /* text-decoration: none;
+    background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-size 0.5s; */
 }
 
 .navbar-inverse .navbar-brand:hover {
-    color: var(--bars);
+    color: var(--bars); /*hover1*/
+    /*--underline-width: 100%; */
 }
+
 
 .navbar-inverse .navbar-nav>li>a {
     color: var(--bars);
@@ -153,7 +161,7 @@ hr.rounded {
     color: var(--bars);
     background-color: var(--hover1);
     padding: 15px;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
@@ -173,16 +181,19 @@ hr.rounded {
 
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:hover {
-    background-color: #333;
+    background-color: var(--bars-light);
 }
-@media screen and (max-width: 767px){
-    .navbar-nav{
-        float:left;
+
+@media screen and (max-width: 767px) {
+    .navbar-nav {
+        float: left;
     }
-    .image-none{
+
+    .image-none {
         display: visible;
     }
 }
+
 /*.navbar-fixed-top{
     position:relative;
 }*/
@@ -209,7 +220,7 @@ hr.rounded {
     width: 33.33333%;
     padding: 20px;
     padding-bottom: 0%;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .large-font {
@@ -271,7 +282,7 @@ hr.rounded {
 
 .responsive {
     max-width: 250px;
-    margin:auto;
+    margin: auto;
     width: auto;
     height: auto;
 }
@@ -283,8 +294,8 @@ hr.rounded {
 section {
     display: block;
     margin: auto;
-    width: 80%;
-    margin-top: 60px;
+    width: 90%;
+    margin-top: 55px;
 }
 
 /*
@@ -301,15 +312,16 @@ section {
 
 .auto-grid li {
     list-style: none;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 2rem 1rem;
     text-align: center;
     background: var(--circles);
     color: var(--light);
     line-height: 30px;
 }
-.auto-grid h4{
-    color:var(--bars);
+
+.auto-grid h4 {
+    color: var(--bars);
 }
 
 .auto-grid img {
@@ -317,10 +329,11 @@ section {
     height: 45px;
 }
 
-.auto-grid li:hover{
+.auto-grid li:hover {
     transition: all .3s;
-    box-shadow: -3px -3px 5px 2px inset var(--hover1);
+    box-shadow: 0px 0px 2px 2px inset var(--hover1);
 }
+
 /*
 .auto-grid li:hover img{
     transform: scale(1.2);
@@ -329,18 +342,19 @@ section {
 */
 
 /*Experience section*/
-/*work experience section*/
+
 /* - &:nth-child(1) {
 	 grid-area: entry1;
 }
  - useful timesaver if there is a lengthy list */
-#section3 {
+/*work experience section
+ #section3 {
     width: 80%;
     display: block;
     justify-content: center;
     align-items: center;
 }
-
+*/
 .timeline {
     line-height: 1.5em;
     font-size: 14px;
@@ -352,7 +366,7 @@ section {
 .timeline:before {
     content: "";
     width: 10px;
-    height: 100%;
+    height: 95%;
     background: var(--shadow);
     position: absolute;
     top: 0;
@@ -369,11 +383,10 @@ section {
     color: var(--bars);
     background-color: var(--shadow);
     border-radius: 10px 10px 0 0;
-    border-bottom:3px solid var(--hover1);
-    border-left:3px solid var(--hover1);
+    border-bottom: 3px solid var(--hover1);
     font-family: sans-serif;
     font-weight: 10px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 1em;
 }
 
@@ -393,6 +406,7 @@ section {
     background-color: var(--bars-light);
     padding: 1em;
     margin: 0;
+    border-radius: 0 0 10px 10px;
 }
 
 .timeline--entry:before {
@@ -419,7 +433,7 @@ section {
         .timeline {
             display: grid;
             grid-gap: 4.75em;
-            grid-template-areas: ". entry1" "entry2 ." ". entry3" "entry4 ." ". entry5";
+            grid-template-areas: ". entry1" "entry2 ." ". entry3" /*"entry4 ." ". entry5"*/;
         }
 
         .timeline:before {
@@ -438,6 +452,8 @@ section {
             grid-area: entry3;
         }
 
+        /*
+
         .timeline--entry:nth-child(4) {
             grid-area: entry4;
         }
@@ -446,6 +462,7 @@ section {
             grid-area: entry5;
         }
 
+*/
         .timeline--entry:nth-of-type(odd):before {
             left: -3.8em;
         }
@@ -460,6 +477,11 @@ section {
             left: 103%;
         }
     }
+    @media screen and (max-width: 991px){
+        .timeline {
+            margin-left:50px;
+        }
+    }
 }
 
 /*Projects section*/
@@ -467,26 +489,36 @@ section {
     line-height: normal;
 }
 
-.project-grid h4{
-    color:var(--hover1);
+.project-grid h4 {
+    color: var(--hover1);
 }
 
 .project-grid {
-    --auto-grid-min-size: 20rem;
+    --auto-grid-min-size: 30rem;
     display: grid;
-    grid-template-columns: no-repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr)); /*change to repeat instaed of no-repeat*/
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    /*change to repeat instaed of no-repeat*/
     grid-gap: 1rem;
 }
 
 .our-webcoderskull {
     background: #111;
     border-radius: 10px;
-
 }
 
 .padding-lg {
     display: block;
-    padding: 1rem;
+    padding: 1.2rem;
+}
+
+@media screen and (max-width: 415px) {
+    .project-grid {
+        --auto-grid-min-size: 20rem;
+        display: grid;
+        grid-template-columns: no-repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+        /*change to repeat instaed of no-repeat*/
+        grid-gap: 1rem;
+    }
 }
 
 /* 
@@ -535,28 +567,30 @@ section {
 }
 
 .social .social-item:nth-child(1) a {
-    color: #0077B5;
-}
-
-.social .social-item:nth-child(1):hover a {
-    background: #0077B5;
-}
-
-.social .social-item:nth-child(2) a {
     color: #fff;
 }
 
-.social .social-item:nth-child(2):hover a {
+.social .social-item:nth-child(1):hover a {
     background: #fff;
-    color:#000;
+    color: #000;
 }
 
+.social .social-item:nth-child(2) a {
+    color: #0077B5;
+}
+
+.social .social-item:nth-child(2):hover a {
+    background: #0077B5;
+}
+
+
 .social .social-item:nth-child(3) a {
-    color: #dd4b39;
+    color: #fff;
 }
 
 .social .social-item:nth-child(3):hover a {
-    background: #dd4b39;
+    background: #fff;
+    color: #000;
 }
 
 .social .social-item:nth-child(4) a {
