@@ -433,7 +433,7 @@ section {
         .timeline {
             display: grid;
             grid-gap: 4.75em;
-            grid-template-areas: ". entry1" "entry2 ." ". entry3" /*"entry4 ." ". entry5"*/;
+            grid-template-areas: ". entry1" "entry2 ." ". entry3"; /*"entry4 ." ". entry5"*/
         }
 
         .timeline:before {
