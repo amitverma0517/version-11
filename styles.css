@@ -493,10 +493,11 @@ section {
 /*Projects section*/
 .project-grid li {
     line-height: normal;
+    text-align: left;
 }
 
 .project-grid h4 {
-    color: var(--hover1);
+    color: var(--light);
 }
 
 .project-grid {
@@ -506,7 +507,17 @@ section {
     /*change to repeat instaed of no-repeat*/
     grid-gap: 1rem;
 }
-
+.project-grid li img {
+    width: 25px;
+    height: 25px;
+}
+.project-title{
+    display:flex;
+}
+.project-detail{
+    display: flex;
+    justify-content: space-between;
+}
 .our-webcoderskull {
     background: #111;
     border-radius: 10px;
