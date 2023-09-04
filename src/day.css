@@ -1,0 +1,55 @@
+.move {
+    background-color: var(--background);
+    color: var(--dark);
+}
+
+.move .footer,
+.move .social-links {
+    background-color: white;
+    color: var(--dark);
+}
+
+.move .navbar {
+    background: var(--light);
+}
+
+.move .navbar-inverse .navbar-brand:hover {
+    color: var(--dark);
+    /*hover1*/
+    /*--underline-width: 100%; */
+}
+
+
+.move .navbar-inverse .navbar-nav>li>a,
+.move .navbar-inverse .navbar-nav>.active>a,
+.move .navbar-inverse .navbar-nav>li>a:hover {
+    color: var(--dark);
+}
+
+.move input:checked+.slider {
+    background-color: var(--light);
+}
+
+.move .buttons {
+    background: var(--light);
+    box-shadow: 3px 3px 2px 0px var(--circle);
+}
+
+.move .auto-grid li {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.move .circles li {
+    background: var(--circle);
+}
+
+.move .our-webcoderskull {
+    background: #606c5d2c;
+    border-radius: 10px;
+}
+
+.move .divider::before,
+.move .divider::after {
+    background-color: var(--hover1);
+}

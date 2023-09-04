@@ -15,6 +15,9 @@
     --hover3: #e4405f;
     --hover2: #33b763;
     --hover1: #3cb371;
+    --hover4: #1890ff;
+    --background: #e5e7eb;
+    --circle: #606c5d2c;
 }
 
 * {
@@ -32,10 +35,6 @@ body {
     color: var(--light);
 }
 
-.codepen:hover {
-    background: rgb(0, 0, 0);
-    border-color: rgb(0, 0, 0);
-}
 
 a {
     color: var(--hover1);
@@ -64,7 +63,7 @@ a:hover {
     padding: 1rem;
     font-size: 16px;
     cursor: pointer;
-    margin:15px 2px;
+    margin: 15px 2px;
 }
 
 .buttons:before {
@@ -139,7 +138,7 @@ hr.rounded {
 .navbar-inverse .navbar-brand {
     color: var(--hover1);
     /*for underline hover effect*/
-   /* text-decoration: none;
+    /* text-decoration: none;
     background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
     display: inline-block;
     text-decoration: none;
@@ -147,7 +146,8 @@ hr.rounded {
 }
 
 .navbar-inverse .navbar-brand:hover {
-    color: var(--bars); /*hover1*/
+    color: var(--bars);
+    /*hover1*/
     /*--underline-width: 100%; */
 }
 
@@ -160,7 +160,11 @@ hr.rounded {
 .navbar-inverse .navbar-nav>li>a:hover {
     color: var(--bars);
     background-color: var(--hover1);
-    padding: 15px;
+    margin: 7px 0px;
+    padding: 8px 15px;
+    /*originally only padding was there for 15px, 
+    now we use margin in collab with padding and the sum total of both 
+    should be 15px to avoid unnecessary transition and translation of the elements */
     border-radius: 10px;
 }
 
@@ -433,7 +437,8 @@ section {
         .timeline {
             display: grid;
             grid-gap: 4.75em;
-            grid-template-areas: ". entry1" "entry2 ." ". entry3"; /*"entry4 ." ". entry5"*/
+            grid-template-areas: ". entry1" "entry2 ." ". entry3";
+            /*"entry4 ." ". entry5"*/
         }
 
         .timeline:before {
@@ -477,9 +482,10 @@ section {
             left: 103%;
         }
     }
-    @media screen and (max-width: 991px){
+
+    @media screen and (max-width: 991px) {
         .timeline {
-            margin-left:50px;
+            margin-left: 50px;
         }
     }
 }

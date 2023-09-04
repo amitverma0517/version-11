@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="src/toggle.css">
     <link rel="stylesheet" href="src/background.css">
     <!--day/night css file-->
-    <link rel="stylesheet" href="src/day-night.css">
+    <link rel="stylesheet" href="src/day.css">
     
   </head>
   <body class="area" data-spy="scroll" data-target=".navbar">
@@ -54,15 +54,12 @@
                   <li><a href="#section3">Experience</a></li>
                   <li><a href="#section4">Projects</a></li>
                   <li><a href="#section5">Contact</a></li>
-                  <!--
-                    <li>
-                    <button onclick="myFunction()" class="sun-moon">
-                    <input type="checkbox" />
-                    <span class="circle large"></span>
-                    <span class="circle small"></span>
-                    </button>
-                  </li> activate when the light version is ready 
-                  -->
+                  <li>
+                    <label class="switch">
+                      <input type="checkbox" onclick="myFunction()">
+                      <span class="slider"></span>
+                    </label>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -79,7 +76,7 @@
     </header>
     <section id="section1">
     <!--about me section--> 
-      <div > <!--by defaulr it had the class ="container"-->
+      <div> <!--by defaulr it had the class ="container"-->
         <div class="row">
           <div class="column-66">
             <h3 class="large-font">Hi, my name is</h3>
