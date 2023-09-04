@@ -3,14 +3,22 @@
     color: var(--dark);
 }
 
-.move .footer,
-.move .social-links {
-    background-color: white;
-    color: var(--dark);
+/*All buttons*/
+.move .buttons {
+    background: var(--light);
+    box-shadow: 3px 3px 2px 0px var(--circle);
 }
 
+/*Dividers*/
+.move .divider::before,
+.move .divider::after {
+    background-color: var(--hover1);
+}
+
+/*Navbar*/
 .move .navbar {
     background: var(--light);
+    box-shadow: 3px 3px 4px 0px var(--circle);
 }
 
 .move .navbar-inverse .navbar-brand:hover {
@@ -19,6 +27,14 @@
     /*--underline-width: 100%; */
 }
 
+.move .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: var(--dark);
+}
+
+.move .navbar-inverse .navbar-toggle:focus,
+.move .navbar-inverse .navbar-toggle:hover {
+    background-color: var(--light);
+}
 
 .move .navbar-inverse .navbar-nav>li>a,
 .move .navbar-inverse .navbar-nav>.active>a,
@@ -26,30 +42,70 @@
     color: var(--dark);
 }
 
+/*Toggle button*/
 .move input:checked+.slider {
     background-color: var(--light);
 }
 
-.move .buttons {
-    background: var(--light);
-    box-shadow: 3px 3px 2px 0px var(--circle);
+/*Skills section*/
+.move .auto-grid h4, .move .auto-grid p{
+    color: var(--dark);
 }
 
 .move .auto-grid li {
     background: var(--light);
-    color: var(--dark);
+    box-shadow: 4px 4px 4px 0px var(--circle);
+}
+
+.move .auto-grid li:hover {
+    box-shadow: 4px 4px 4px 0px var(--hover1);
 }
 
 .move .circles li {
     background: var(--circle);
 }
 
+/*Experience section*/
 .move .our-webcoderskull {
-    background: #606c5d2c;
-    border-radius: 10px;
+    background: var(--circle);
 }
 
-.move .divider::before,
-.move .divider::after {
-    background-color: var(--hover1);
+.move .timeline:before {
+    background: var(--light);
+    box-shadow: 0 0 2px 4px var(--circle);
+}
+
+.move .timeline--entry__title {
+    color: var(--dark);
+    background-color: var(--circle);
+}
+
+.move .timeline--entry__title:before {
+    border-right: 10px solid var(--circle);
+}
+
+.move .timeline--entry__detail {
+    background-color: var(--bars);
+    box-shadow: 4px 4px 4px 0px var(--circle);
+}
+
+.move .timeline--entry:before {
+    color: var(--dark);
+    background-color: var(--light);
+    border: 0.2em solid var(--hover1);
+    text-shadow: 0 1px 0 var(--hover1);
+}
+
+@supports (display: grid) {
+    @media screen and (min-width: 992px){
+        .timeline--entry:nth-of-type(even):not(:nth-of-type(odd)) .timeline--entry__title:before {
+            border-left: 10px solid var(--circle);
+        }
+    }
+}
+/*footer */
+.move .footer,
+.move .social-links {
+    background-color: white;
+    color: var(--dark);
 }
